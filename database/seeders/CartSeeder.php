@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class PanierSeeder extends Seeder
+class CartSeeder extends Seeder
 {
     /**
      * Run the database seeds.

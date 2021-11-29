@@ -14,7 +14,7 @@ class CreateClientsTable extends Migration
     public function up()
     {
         Schema::create('clients', function ($table) {
-            $table->id('id_client');
+            $table->id('client_id');
             $table->string('address', 100);
             $table->string('phone', 100);
             $table->timestamps();

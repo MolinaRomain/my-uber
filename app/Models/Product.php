@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Product extends Model
 {
 
     use HasFactory;
@@ -16,6 +16,6 @@ class Article extends Model
     } */
 
     public function article(){
-        return $this->belongsToMany(Panier::class)->using(ArticlePanier::class);
+        return $this->belongsToMany(Cart::class)->using(ProductCart::class);
     }
 }

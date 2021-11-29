@@ -12,6 +12,6 @@ class Client extends Model
     //Un Client = un panier
     public function panier()
     {
-        return $this->hasOne(Panier::class);
+        return $this->hasOne(Cart::class);
     }
 }

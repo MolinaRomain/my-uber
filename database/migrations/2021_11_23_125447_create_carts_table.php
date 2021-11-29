@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaniersTable extends Migration
+class CreateCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePaniersTable extends Migration
      */
     public function up()
     {
-        Schema::create('paniers', function (Blueprint $table) {
-            $table->id('id_panier');
-            $table->integer('id_client');
+        Schema::create('carts', function (Blueprint $table) {
+            $table->id('cart_id');
+            $table->integer('client_id');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreatePaniersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paniers');
+        Schema::dropIfExists('carts');
     }
 }

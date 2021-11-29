@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ArticlePanier extends Pivot
+class ProductCart extends Pivot
 {
     public $incrementing = true;
 }

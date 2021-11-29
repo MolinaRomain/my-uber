@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Panier extends Model
+class Cart extends Model
 {
     //use HasFactory;
 
@@ -15,7 +15,7 @@ class Panier extends Model
     } */
 
     public function article(){
-        return $this->belongsToMany(Article::class);
+        return $this->belongsToMany(Product::class);
     }
 
     public function client(){

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class ArticleSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,17 +17,17 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->insert(
+        DB::table('products')->insert(
             array(
                 array(
-                    'nom_produit' => 'pizza fromage',
+                    'product_name' => 'pizza fromage',
 
                 ),
                 array(
-                    'nom_produit' => 'pizza chorizo',
+                    'product_name' => 'pizza chorizo',
                 ),
                 array(
-                    'nom_produit' => 'pizza Royale',
+                    'product_name' => 'pizza Royale',
                 )
             )
         );

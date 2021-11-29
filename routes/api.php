@@ -21,5 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('client/product', [ClientController::class,'addProduct']);
-Route::post('client/profile',[ClientController::class, 'addProfile']);
+Route::post('client/product/{$cart}', [ClientController::class, 'addProduct']);
+Route::put('client/profile/{$cart}', [ClientController::class, 'addProfile']);
+Route::get('/api/client/order', [ClientController::class, 'validationCart']);
+Route::get('/api/client', [ClientController::class, 'StatusOrder']);
+
+Route::get('/api/seller', [SellerController::class, 'ShowOrders']);
+Route::put('/api/seller/{$numorder}', [SellerController::class, 'OrderTreatment']);
+
+Route::get('/api/shipper/order', [ShipperController::class, 'ShowPastedOrder']);
+Route::post('/api/shipper/', [ShipperController::class, 'ShipperTraitement']);

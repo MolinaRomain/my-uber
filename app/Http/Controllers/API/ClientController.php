@@ -41,9 +41,8 @@ class ClientController extends Controller
                 return "article ajouté";
             }
         } else {
-            return "no response";
-        }
-        return "Un article a été ajouté au panier";
+            return "erreur ajout produit";
+        } 
     }
 
     public function addProfile(Request $request)

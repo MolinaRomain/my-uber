@@ -23,11 +23,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('client/product/{$cart}', [ClientController::class, 'addProduct']);
 Route::put('client/profile/{$cart}', [ClientController::class, 'addProfile']);
-Route::get('/api/client/order', [ClientController::class, 'validationCart']);
-Route::get('/api/client', [ClientController::class, 'StatusOrder']);
+Route::get('/api/client/order{$cart}', [ClientController::class, 'validateCart']);
+Route::get('/api/client/{$cart}', [ClientController::class, 'statusOrder']);
 
-Route::get('/api/seller', [SellerController::class, 'ShowOrders']);
-Route::put('/api/seller/{$numorder}', [SellerController::class, 'OrderTreatment']);
+Route::get('/api/seller', [SellerController::class, 'showOrders']);
+Route::put('/api/seller/{$idorder}', [SellerController::class, 'makeOrder']);
 
-Route::get('/api/shipper/order', [ShipperController::class, 'ShowPastedOrder']);
-Route::post('/api/shipper/', [ShipperController::class, 'ShipperTraitement']);
+Route::get('/api/shipper/ready', [ShipperController::class, 'readyToShip']);
+Route::post('/api/shipper/{$idorder}', [ShipperController::class, 'sendOrder']);

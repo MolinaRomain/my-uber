@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateOrdersTable extends Migration
 {
@@ -14,14 +15,12 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->id('order_id');
-            $table->unsignedBigInteger('cart_id');
-            $table->unsignedBigInteger('shipper_id');
+            $table->id();
+            $table->unsignedBigInteger('cart_id')->nullable();
+            $table->unsignedBigInteger('shipper_id')->nullable();
             $table->string('status');
             $table->timestamps();
-            
-            $table->foreign('cart_id')->references('cart_id')->on('carts');
-            $table->foreign('shipper_id')->references('shipper_id')->on('shippers');
+
         });
     }
 

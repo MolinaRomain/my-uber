@@ -7,6 +7,18 @@ use Illuminate\Http\Request;
 
 class ShipperController extends Controller
 {
+
+    public function makeOrder(){
+        
+    }
+
+    public function readyToShip(){
+
+    }
+
+    public function sendOrder(){
+
+    }
     /**
      * Display a listing of the resource.
      *

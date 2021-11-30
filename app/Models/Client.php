@@ -9,9 +9,12 @@ class Client extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'cart_id', 'address', 'phone',
+    ];
     //Un Client = un panier
     public function cart()
     {
-        return $this->hasOne(Cart::class);
+        return $this->belongsTo(Cart::class);
     }
 }

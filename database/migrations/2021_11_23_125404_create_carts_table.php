@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateCartsTable extends Migration
 {
@@ -14,10 +15,8 @@ class CreateCartsTable extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
-            $table->id('cart_id');
-            $table->unsignedBigInteger('client_id');
+            $table->id();
             $table->timestamps();
-            $table->foreign('client_id')->references('client_id')->on('clients');
         });
     }
 

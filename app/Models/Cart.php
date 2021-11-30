@@ -10,15 +10,18 @@ class Cart extends Model
     use HasFactory;
 
 
-    public function article(){
+    public function product()
+    {
         return $this->belongsToMany(Product::class)->using(CartProduct::class);
     }
 
-    public function client(){
-        return $this->belongsTo(Client::class);
+    public function client()
+    {
+        return $this->hasOne(Client::class);
     }
 
-    public function order(){
+    public function order()
+    {
         return $this->hasOne(Order::class);
     }
 }

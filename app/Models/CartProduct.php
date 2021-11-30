@@ -8,3 +8,5 @@ class CartProduct extends Pivot
 {
     public $incrementing = true;
 }
+
+

@@ -10,7 +10,8 @@ class Product extends Model
 
     use HasFactory;
 
-    public function article(){
+    public function cart()
+    {
         return $this->belongsToMany(Cart::class)->using(CartProduct::class);
     }
 }

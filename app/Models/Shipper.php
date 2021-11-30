@@ -10,6 +10,6 @@ class Shipper extends Model
     use HasFactory;
 
     public function order(){
-        //return $this->belong
+        return $this->hasMany(Order::class);
     }
 }

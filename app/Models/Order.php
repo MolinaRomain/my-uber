@@ -13,4 +13,8 @@ class Order extends Model
         return $this->belongsTo(Cart::class);
     }
 
+    public function shipper(){
+        return $this->belongsTo(Shipper::class);
+    }
+
 }

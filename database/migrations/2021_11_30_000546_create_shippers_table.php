@@ -15,10 +15,8 @@ class CreateShippersTable extends Migration
     {
         Schema::create('shippers', function (Blueprint $table) {
             $table->id('shipper_id');
-            $table->unsignedBigInteger('order_id');
             $table->timestamps();
 
-            $table->foreign('order_id')->references('order_id')->on('orders');
         });
     }
 

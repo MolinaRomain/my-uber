@@ -10,12 +10,7 @@ class Product extends Model
 
     use HasFactory;
 
-/*     public function panier()
-    {
-        return $this->belongsToMany(Panier::class);
-    } */
-
     public function article(){
-        return $this->belongsToMany(Cart::class)->using(ProductCart::class);
+        return $this->belongsToMany(Cart::class)->using(CartProduct::class);
     }
 }

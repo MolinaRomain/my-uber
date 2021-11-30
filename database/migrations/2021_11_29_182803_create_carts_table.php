@@ -15,8 +15,9 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id('cart_id');
-            $table->integer('client_id');
+            $table->unsignedBigInteger('client_id');
             $table->timestamps();
+            $table->foreign('client_id')->references('client_id')->on('clients');
         });
     }
 

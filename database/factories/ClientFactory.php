@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Client;
-use App\Models\Panier;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ClientFactory extends Factory
@@ -17,8 +16,6 @@ class ClientFactory extends Factory
     {
         return [
 
-            'address' => $this->faker->address(),
-            'phone' => '+33' . $this->faker->randomNumber($nbDigits = 9, $strict = false),
         ];
     }
 }

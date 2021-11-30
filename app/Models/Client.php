@@ -10,7 +10,7 @@ class Client extends Model
     use HasFactory;
 
     //Un Client = un panier
-    public function panier()
+    public function cart()
     {
         return $this->hasOne(Cart::class);
     }

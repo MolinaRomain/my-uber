@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CartController extends Controller
+class SellerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,9 +23,9 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function addProduct(Request $request,$cart)
     {
-        //
+        //$myCart=
     }
 
     /**

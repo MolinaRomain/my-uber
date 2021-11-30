@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    //use HasFactory;
+    use HasFactory;
 
-/*     public function client()
-    {
-        return $this->belongsTo(Client::class);
-    } */
 
     public function article(){
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class)->using(CartProduct::class);
     }
 
     public function client(){
         return $this->belongsTo(Client::class);
+    }
+
+    public function order(){
+        return $this->hasOne(Order::class);
     }
 }

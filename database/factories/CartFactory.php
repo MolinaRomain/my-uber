@@ -2,9 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Cart;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PanierFactory extends Factory
+class CartFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +16,7 @@ class PanierFactory extends Factory
     public function definition()
     {
         return [
-            //
+
         ];
     }
 }

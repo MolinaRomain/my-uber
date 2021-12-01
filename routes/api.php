@@ -31,8 +31,8 @@ Route::post('client/profile', [ClientController::class, 'addProfile']);
 Route::get('client/order', [ClientController::class, 'validateCart']);
 Route::get('client', [ClientController::class, 'statusOrder']);
 
-Route::get('    ', [SellerController::class, 'showOrders']);
-Route::post('seller', [SellerController::class, 'makeOrder']);
+Route::get('seller', [SellerController::class, 'showOrders']);
+Route::post('seller', [SellerController::class, 'processOrder']);
 
-Route::get('shipper/ready', [ShipperController::class, 'readyToShip']);
-Route::post('shipper/{$idorder}', [ShipperController::class, 'sendOrder']);
+Route::get('shipper/order', [ShipperController::class, 'showOrders']);
+Route::post('shipper', [ShipperController::class, 'processOrder']);
